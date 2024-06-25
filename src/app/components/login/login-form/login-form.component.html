@@ -1,7 +1,7 @@
 <div>
-    <h4>Login Form</h4>
-    <form [formGroup]="form" (ngSubmit)="login()">
-        <div>
+    <h4 class="title">Login Form</h4>
+    <form [formGroup]="form" (ngSubmit)="login()" class="form">
+        <div class="inputWrapper">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required formControlName="email">
             @if (form.controls.email.invalid && (form.controls.email.touched || form.controls.email.dirty)){
@@ -13,7 +13,7 @@
                 }
             }
         </div>
-        <div>
+        <div class="inputWrapper">
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required formControlName="password">
             @if (form.controls.password.invalid && (form.controls.password.touched || form.controls.password.dirty)){
@@ -26,6 +26,7 @@
             }
         </div>
         <button type="submit">Login</button>
+        <span>{{errorMessage}}</span>
     </form>
-    <button (click)="navigateToHome()">Navigate</button>
 </div>
+<p-toast />

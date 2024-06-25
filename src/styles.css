@@ -1,8 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
 
 .container{
     display: flex;
     max-width: 1240px;
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
+}
+
+div, h1, h2, h3, h4, h5, h6, p, a, span, button, input, label, form, img, ul, li, ol, nav, section, article, footer, header, aside, main, body, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }

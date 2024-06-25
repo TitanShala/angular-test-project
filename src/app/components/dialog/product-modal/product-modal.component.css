@@ -1,0 +1,90 @@
+.dialog{
+    padding:50px;
+}
+
+.dialogWrapper{
+    width: 400px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+    gap:20px
+}
+
+
+.title{
+    font-size: 24;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.inputWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputWrapper label{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.inputWrapper input, select{
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+span{
+    color: red;
+    font-size: 14px;
+}
+
+.buttonsWrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button{
+    padding: 5px 15px;
+    background-color: transparent;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    box-sizing: border-box;
+}
+
+#cancel{
+    background-color: red;
+    color: white;
+}
+
+#cancel:hover{
+    border: 1px solid red;
+    background-color: transparent;
+    color: red;
+}
+
+#save{
+    background-color: green;
+    color: white;
+}
+
+#save:hover{
+    border: 1px solid green;
+    background-color: transparent;
+    color: green;
+}
+

@@ -1,17 +1,16 @@
 <nav class="navbar container">
     <div class="navbar-left">
       <!-- Logo -->
-      <img src="assets/logo.png" alt="Logo" class="logo">
+      <img src="images/app-logo.png" alt="Logo" class="logo">
     </div>
     
     <div class="navbar-right">
       <!-- Links -->
-      <a routerLink="/" routerLinkActive="active" class="nav-link">Home</a>
+      <a routerLink="/" routerLinkActive="active" class="nav-link" [routerLinkActiveOptions]="{exact:true}">Home </a>
       <a routerLink="/products" routerLinkActive="active" class="nav-link">Products</a>
       
       <!-- Logout Button -->
       <button class="logout-btn" (click)="logout()">Logout</button>
     </div>
 </nav>
-<a routerLink="/products" routerLinkActive="active" class="nav-link">Products</a>
 <router-outlet></router-outlet>

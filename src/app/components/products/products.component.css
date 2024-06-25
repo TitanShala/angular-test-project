@@ -1,0 +1,78 @@
+.container{
+    flex-direction: column;
+}
+
+.title{
+    margin-bottom: 100px;
+}
+
+.tableWrapper{
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid #000;
+}
+
+table{
+    width: 100%;
+}
+table,tr{
+    border: 1px solid #000;
+}
+
+thead{
+    background-color: #f0f0f0;
+}
+
+td{
+    background-color: aliceblue;
+    text-align: center;
+}
+
+#actions{
+    display: flex;
+    justify-content: space-around;
+}
+
+button{
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    color: white;
+    font-weight: 500;
+}
+
+button:hover{
+    background-color: #3b3030;
+}
+
+.button__add{
+    background-color: green;
+}
+
+.button__add:hover{
+    background-color: rgb(20, 92, 20);
+}
+
+#delete{
+    background-color: red;
+}
+
+#delete:hover{
+    background-color: rgb(116, 4, 4);
+
+}
+
+#edit{
+    background-color: rgb(79, 155, 216);
+}
+
+#edit:hover{
+    background-color: rgb(42, 141, 222);
+}

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth/auth.service';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-authenticated',
   standalone: true,
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink,RouterLinkActive],
   templateUrl: './authenticated.component.html',
   styleUrl: './authenticated.component.css'
 })

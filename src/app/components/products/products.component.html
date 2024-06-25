@@ -1,1 +1,43 @@
-<p>products works!</p>
+<div class="container">
+    <h1 class="title">Products</h1>
+    <div class="tableWrapper">
+        <div class="header">
+            <h4>ProductForm</h4>
+            <button (click)="showAddDialog()" class="button__add">Add New +</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of products">
+                    <td [innerHTML]="item.name"></td>
+                    <td [innerHTML]="item.type"></td>
+                    <td [innerHTML]="item.price + '$'"></td>
+                    <td [innerHTML]="formatDate(item.date)"></td>
+                    <td id="actions">
+                        <button id="edit" (click)="showEditDialog(item)">Edit</button>
+                        <button id="delete" (click)="confirm(item.id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<product-modal [visible]="visibleModal" (onSaveEdit)="editProduct($event)" (onSaveAdd)="addProduct($event)" (onCancel)="onCancel()" [product]="selectedProduct"></product-modal>
+<p-toast />
+<p-confirmDialog>
+    <ng-template pTemplate="message" let-message>
+        <div class="flex flex-column align-items-center w-full gap-3 border-bottom-1 surface-border" style="padding: 20px;">
+            <i class="pi pi-exclamation-circle text-6xl text-primary-500"></i>
+            <p>Are you sure you want to delete the product</p>
+        </div>
+    </ng-template>
+</p-confirmDialog>

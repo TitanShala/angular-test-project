@@ -1,0 +1,46 @@
+<p-dialog [modal]="true" [(visible)]="visible" closable="false" class="dialog">
+    <div class="dialogWrapper">
+        <h2 class="title">Product Form</h2>
+        <form [formGroup]="form" (ngSubmit)="onSaveClick()" class="form">
+            <div class="inputWrapper">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required formControlName="name">
+                @if (form.controls.name.invalid && (form.controls.name.touched || form.controls.name.dirty)){
+                    @if (form.controls.name.errors?.['required']){
+                        <span>Name is required</span>
+                    }
+                }
+            </div>
+            <div class="inputWrapper">
+                <label for="type">Category</label>
+                <!-- <input type="text" id="type" name="type" required formControlName="type"> -->
+                <select id="type" name="type" required formControlName="type">
+                    <option *ngFor="let option of options" [ngValue]="option">{{ option }}</option>
+                </select>
+            </div>
+            
+            <div class="inputWrapper">
+                <label for="price">Price</label>
+                <input type="number" id="price" name="price" required formControlName="price" min="1">
+                @if (form.controls.price.invalid && (form.controls.price.touched || form.controls.price.dirty)){
+                    @if (form.controls.price.errors?.['required']){
+                        <span>Price is required</span>
+                    }
+                    @if (form.controls.price.errors?.['min']){
+                        <span>Minimum price is 1</span>
+                    }
+                }
+            </div>
+            <div class="inputWrapper">
+                <label for="name">Date</label>
+                <input type="date" id="date" name="date" required formControlName="date">
+            </div>
+            <div class="buttonsWrapper">
+                <button type="button" (click)="onCancelClick()" id="cancel">Cancel</button>
+                <button type="submit" id="save">Save</button>
+            </div>
+        </form>
+
+
+    </div>
+</p-dialog>
